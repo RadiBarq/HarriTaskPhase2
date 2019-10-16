@@ -1,0 +1,869 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CA4234F8686008FE67D /* AppDelegate.swift */; };
+		4B411CA7234F8686008FE67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CA6234F8686008FE67D /* SceneDelegate.swift */; };
+		4B411CAC234F8687008FE67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CAA234F8687008FE67D /* Main.storyboard */; };
+		4B411CAE234F8688008FE67D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CAD234F8688008FE67D /* Assets.xcassets */; };
+		4B411CB1234F8689008FE67D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */; };
+		4B411CBC234F8689008FE67D /* HarriTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CBB234F8689008FE67D /* HarriTaskTests.swift */; };
+		4B411CC7234F8689008FE67D /* HarriTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CC6234F8689008FE67D /* HarriTaskUITests.swift */; };
+		4B411CD5234F8723008FE67D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CD4234F8723008FE67D /* HomeTableViewController.swift */; };
+		4B411CD723530E11008FE67D /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CD623530E11008FE67D /* HomeTableViewCell.swift */; };
+		4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CDA2353134D008FE67D /* UserSearchBodyData.swift */; };
+		4B411CDD235319B3008FE67D /* UserSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CDC235319B3008FE67D /* UserSearchResponse.swift */; };
+		4B411CDF23531B21008FE67D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CDE23531B21008FE67D /* APIError.swift */; };
+		4B411CE12353216D008FE67D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CE02353216D008FE67D /* HomeModel.swift */; };
+		4B411CE323532406008FE67D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CE223532406008FE67D /* NetworkManager.swift */; };
+		4B411CE523534299008FE67D /* HomeTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CE423534299008FE67D /* HomeTableFooterView.xib */; };
+		4B411CE92353470B008FE67D /* HomeTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CE82353470B008FE67D /* HomeTableFooterView.swift */; };
+		4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */; };
+		4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */; };
+		4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */; };
+		4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */; };
+		4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */; };
+		4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC58A0235710E200412F10 /* TableViewModel.swift */; };
+		8B5735C0EA99DD1B94212766 /* Pods_HarriTask_HarriTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB06F5460C475CCD936D51 /* Pods_HarriTask_HarriTaskUITests.framework */; };
+		9531E7902C9CA259FAB64BCD /* Pods_HarriTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */; };
+		CAAFABEC7340D05D96CC31F8 /* Pods_HarriTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B411CB8234F8689008FE67D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B411C99234F8686008FE67D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B411CA0234F8686008FE67D;
+			remoteInfo = HarriTask;
+		};
+		4B411CC3234F8689008FE67D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B411C99234F8686008FE67D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B411CA0234F8686008FE67D;
+			remoteInfo = HarriTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B411CA1234F8686008FE67D /* HarriTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarriTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B411CA4234F8686008FE67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B411CA6234F8686008FE67D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B411CAB234F8687008FE67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B411CAD234F8688008FE67D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B411CB0234F8689008FE67D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B411CB2234F8689008FE67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B411CB7234F8689008FE67D /* HarriTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarriTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B411CBB234F8689008FE67D /* HarriTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarriTaskTests.swift; sourceTree = "<group>"; };
+		4B411CBD234F8689008FE67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B411CC2234F8689008FE67D /* HarriTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarriTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B411CC6234F8689008FE67D /* HarriTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarriTaskUITests.swift; sourceTree = "<group>"; };
+		4B411CC8234F8689008FE67D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B411CD4234F8723008FE67D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		4B411CD623530E11008FE67D /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		4B411CDA2353134D008FE67D /* UserSearchBodyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchBodyData.swift; sourceTree = "<group>"; };
+		4B411CDC235319B3008FE67D /* UserSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResponse.swift; sourceTree = "<group>"; };
+		4B411CDE23531B21008FE67D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4B411CE02353216D008FE67D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		4B411CE223532406008FE67D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4B411CE423534299008FE67D /* HomeTableFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableFooterView.xib; sourceTree = "<group>"; };
+		4B411CE82353470B008FE67D /* HomeTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableFooterView.swift; sourceTree = "<group>"; };
+		4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
+		4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewRepresentable.swift; sourceTree = "<group>"; };
+		4BEC58A0235710E200412F10 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D502FAD4C687378CB4D951A /* Pods-HarriTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask.release.xcconfig"; path = "Target Support Files/Pods-HarriTask/Pods-HarriTask.release.xcconfig"; sourceTree = "<group>"; };
+		B88658A36D5AF88C96079268 /* Pods-HarriTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask.debug.xcconfig"; path = "Target Support Files/Pods-HarriTask/Pods-HarriTask.debug.xcconfig"; sourceTree = "<group>"; };
+		C13F12F2B189D9D223384FAD /* Pods-HarriTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-HarriTaskTests/Pods-HarriTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1AB06F5460C475CCD936D51 /* Pods_HarriTask_HarriTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTask_HarriTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4476885C16504E59DCB8882 /* Pods-HarriTask-HarriTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask-HarriTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED16EAB8B9B2A71AA4A92939 /* Pods-HarriTask-HarriTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask-HarriTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F29D096A1435B9E5BC0B6CE9 /* Pods-HarriTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTaskTests.release.xcconfig"; path = "Target Support Files/Pods-HarriTaskTests/Pods-HarriTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B411C9E234F8686008FE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9531E7902C9CA259FAB64BCD /* Pods_HarriTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CB4234F8689008FE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAFABEC7340D05D96CC31F8 /* Pods_HarriTaskTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CBF234F8689008FE67D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B5735C0EA99DD1B94212766 /* Pods_HarriTask_HarriTaskUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B411C98234F8686008FE67D = {
+			isa = PBXGroup;
+			children = (
+				4B411CA3234F8686008FE67D /* HarriTask */,
+				4B411CBA234F8689008FE67D /* HarriTaskTests */,
+				4B411CC5234F8689008FE67D /* HarriTaskUITests */,
+				4B411CA2234F8686008FE67D /* Products */,
+				59DE315B5AE997A1B740A91D /* Pods */,
+				84A435D45E59FEBECC8A0807 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B411CA2234F8686008FE67D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CA1234F8686008FE67D /* HarriTask.app */,
+				4B411CB7234F8689008FE67D /* HarriTaskTests.xctest */,
+				4B411CC2234F8689008FE67D /* HarriTaskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B411CA3234F8686008FE67D /* HarriTask */ = {
+			isa = PBXGroup;
+			children = (
+				4BEC58A82357285E00412F10 /* Representables */,
+				4BEC58A72357282A00412F10 /* Cells */,
+				4BEC58A62357276100412F10 /* Helpers */,
+				4BEC58A52357275A00412F10 /* Views */,
+				4BEC58A42357275300412F10 /* VIew Controllers */,
+				4BEC58A32357274E00412F10 /* Models */,
+				4BEC58A22357274500412F10 /* View Models */,
+				4B411CEA23537271008FE67D /* Resources */,
+			);
+			path = HarriTask;
+			sourceTree = "<group>";
+		};
+		4B411CBA234F8689008FE67D /* HarriTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CBB234F8689008FE67D /* HarriTaskTests.swift */,
+				4B411CBD234F8689008FE67D /* Info.plist */,
+			);
+			path = HarriTaskTests;
+			sourceTree = "<group>";
+		};
+		4B411CC5234F8689008FE67D /* HarriTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CC6234F8689008FE67D /* HarriTaskUITests.swift */,
+				4B411CC8234F8689008FE67D /* Info.plist */,
+			);
+			path = HarriTaskUITests;
+			sourceTree = "<group>";
+		};
+		4B411CEA23537271008FE67D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CAD234F8688008FE67D /* Assets.xcassets */,
+				4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */,
+				4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */,
+				4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4BEC58A22357274500412F10 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */,
+				4BEC58A0235710E200412F10 /* TableViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		4BEC58A32357274E00412F10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CDA2353134D008FE67D /* UserSearchBodyData.swift */,
+				4B411CDC235319B3008FE67D /* UserSearchResponse.swift */,
+				4B411CE02353216D008FE67D /* HomeModel.swift */,
+				4B411CDE23531B21008FE67D /* APIError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4BEC58A42357275300412F10 /* VIew Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CD4234F8723008FE67D /* HomeTableViewController.swift */,
+			);
+			path = "VIew Controllers";
+			sourceTree = "<group>";
+		};
+		4BEC58A52357275A00412F10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CE423534299008FE67D /* HomeTableFooterView.xib */,
+				4B411CE82353470B008FE67D /* HomeTableFooterView.swift */,
+				4B411CAA234F8687008FE67D /* Main.storyboard */,
+				4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4BEC58A62357276100412F10 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CA6234F8686008FE67D /* SceneDelegate.swift */,
+				4B411CA4234F8686008FE67D /* AppDelegate.swift */,
+				4B411CE223532406008FE67D /* NetworkManager.swift */,
+				4B411CB2234F8689008FE67D /* Info.plist */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4BEC58A72357282A00412F10 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4B411CD623530E11008FE67D /* HomeTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4BEC58A82357285E00412F10 /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+				4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */,
+			);
+			path = Representables;
+			sourceTree = "<group>";
+		};
+		59DE315B5AE997A1B740A91D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B88658A36D5AF88C96079268 /* Pods-HarriTask.debug.xcconfig */,
+				7D502FAD4C687378CB4D951A /* Pods-HarriTask.release.xcconfig */,
+				D4476885C16504E59DCB8882 /* Pods-HarriTask-HarriTaskUITests.debug.xcconfig */,
+				ED16EAB8B9B2A71AA4A92939 /* Pods-HarriTask-HarriTaskUITests.release.xcconfig */,
+				C13F12F2B189D9D223384FAD /* Pods-HarriTaskTests.debug.xcconfig */,
+				F29D096A1435B9E5BC0B6CE9 /* Pods-HarriTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84A435D45E59FEBECC8A0807 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */,
+				D1AB06F5460C475CCD936D51 /* Pods_HarriTask_HarriTaskUITests.framework */,
+				68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B411CA0234F8686008FE67D /* HarriTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B411CCB234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTask" */;
+			buildPhases = (
+				F39EBE9A8E879CB339D8BDCC /* [CP] Check Pods Manifest.lock */,
+				4B411C9D234F8686008FE67D /* Sources */,
+				4B411C9E234F8686008FE67D /* Frameworks */,
+				4B411C9F234F8686008FE67D /* Resources */,
+				C3CBD773418F2BAE3AD1BDD1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HarriTask;
+			productName = HarriTask;
+			productReference = 4B411CA1234F8686008FE67D /* HarriTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B411CB6234F8689008FE67D /* HarriTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B411CCE234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTaskTests" */;
+			buildPhases = (
+				A798DF630FEF1A7A24C7956E /* [CP] Check Pods Manifest.lock */,
+				4B411CB3234F8689008FE67D /* Sources */,
+				4B411CB4234F8689008FE67D /* Frameworks */,
+				4B411CB5234F8689008FE67D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B411CB9234F8689008FE67D /* PBXTargetDependency */,
+			);
+			name = HarriTaskTests;
+			productName = HarriTaskTests;
+			productReference = 4B411CB7234F8689008FE67D /* HarriTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B411CC1234F8689008FE67D /* HarriTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B411CD1234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTaskUITests" */;
+			buildPhases = (
+				AC2F82395D0476A6426A2AB6 /* [CP] Check Pods Manifest.lock */,
+				4B411CBE234F8689008FE67D /* Sources */,
+				4B411CBF234F8689008FE67D /* Frameworks */,
+				4B411CC0234F8689008FE67D /* Resources */,
+				536416AA971A80FAB9E33D1D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B411CC4234F8689008FE67D /* PBXTargetDependency */,
+			);
+			name = HarriTaskUITests;
+			productName = HarriTaskUITests;
+			productReference = 4B411CC2234F8689008FE67D /* HarriTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B411C99234F8686008FE67D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Harri;
+				TargetAttributes = {
+					4B411CA0234F8686008FE67D = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					4B411CB6234F8689008FE67D = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 4B411CA0234F8686008FE67D;
+					};
+					4B411CC1234F8689008FE67D = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 4B411CA0234F8686008FE67D;
+					};
+				};
+			};
+			buildConfigurationList = 4B411C9C234F8686008FE67D /* Build configuration list for PBXProject "HarriTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B411C98234F8686008FE67D;
+			productRefGroup = 4B411CA2234F8686008FE67D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B411CA0234F8686008FE67D /* HarriTask */,
+				4B411CB6234F8689008FE67D /* HarriTaskTests */,
+				4B411CC1234F8689008FE67D /* HarriTaskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B411C9F234F8686008FE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B411CB1234F8689008FE67D /* LaunchScreen.storyboard in Resources */,
+				4B411CAE234F8688008FE67D /* Assets.xcassets in Resources */,
+				4B411CE523534299008FE67D /* HomeTableFooterView.xib in Resources */,
+				4B411CAC234F8687008FE67D /* Main.storyboard in Resources */,
+				4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */,
+				4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */,
+				4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CB5234F8689008FE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CC0234F8689008FE67D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		536416AA971A80FAB9E33D1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A798DF630FEF1A7A24C7956E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HarriTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2F82395D0476A6426A2AB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HarriTask-HarriTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3CBD773418F2BAE3AD1BDD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HarriTask/Pods-HarriTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HarriTask/Pods-HarriTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HarriTask/Pods-HarriTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39EBE9A8E879CB339D8BDCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HarriTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B411C9D234F8686008FE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B411CE323532406008FE67D /* NetworkManager.swift in Sources */,
+				4B411CD5234F8723008FE67D /* HomeTableViewController.swift in Sources */,
+				4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */,
+				4B411CE12353216D008FE67D /* HomeModel.swift in Sources */,
+				4B411CE92353470B008FE67D /* HomeTableFooterView.swift in Sources */,
+				4B411CDD235319B3008FE67D /* UserSearchResponse.swift in Sources */,
+				4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */,
+				4B411CD723530E11008FE67D /* HomeTableViewCell.swift in Sources */,
+				4B411CDF23531B21008FE67D /* APIError.swift in Sources */,
+				4B411CA7234F8686008FE67D /* SceneDelegate.swift in Sources */,
+				4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */,
+				4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */,
+				4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CB3234F8689008FE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B411CBC234F8689008FE67D /* HarriTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B411CBE234F8689008FE67D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B411CC7234F8689008FE67D /* HarriTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B411CB9234F8689008FE67D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B411CA0234F8686008FE67D /* HarriTask */;
+			targetProxy = 4B411CB8234F8689008FE67D /* PBXContainerItemProxy */;
+		};
+		4B411CC4234F8689008FE67D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B411CA0234F8686008FE67D /* HarriTask */;
+			targetProxy = 4B411CC3234F8689008FE67D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B411CAA234F8687008FE67D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B411CAB234F8687008FE67D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B411CB0234F8689008FE67D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B411CC9234F8689008FE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B411CCA234F8689008FE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B411CCC234F8689008FE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B88658A36D5AF88C96079268 /* Pods-HarriTask.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B411CCD234F8689008FE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D502FAD4C687378CB4D951A /* Pods-HarriTask.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B411CCF234F8689008FE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13F12F2B189D9D223384FAD /* Pods-HarriTaskTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarriTask.app/HarriTask";
+			};
+			name = Debug;
+		};
+		4B411CD0234F8689008FE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F29D096A1435B9E5BC0B6CE9 /* Pods-HarriTaskTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTaskTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarriTask.app/HarriTask";
+			};
+			name = Release;
+		};
+		4B411CD2234F8689008FE67D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4476885C16504E59DCB8882 /* Pods-HarriTask-HarriTaskUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HarriTask;
+			};
+			name = Debug;
+		};
+		4B411CD3234F8689008FE67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED16EAB8B9B2A71AA4A92939 /* Pods-HarriTask-HarriTaskUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5S7V735958;
+				INFOPLIST_FILE = HarriTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Harri.HarriTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HarriTask;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B411C9C234F8686008FE67D /* Build configuration list for PBXProject "HarriTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B411CC9234F8689008FE67D /* Debug */,
+				4B411CCA234F8689008FE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B411CCB234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B411CCC234F8689008FE67D /* Debug */,
+				4B411CCD234F8689008FE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B411CCE234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B411CCF234F8689008FE67D /* Debug */,
+				4B411CD0234F8689008FE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B411CD1234F8689008FE67D /* Build configuration list for PBXNativeTarget "HarriTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B411CD2234F8689008FE67D /* Debug */,
+				4B411CD3234F8689008FE67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B411C99234F8686008FE67D /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_HarriTaskTests {
+  umbrella header "Pods-HarriTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

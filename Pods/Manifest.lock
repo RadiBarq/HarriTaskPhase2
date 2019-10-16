@@ -1,0 +1,22 @@
+PODS:
+  - JNAvatarWithInitials (1.1.5):
+    - SDWebImage (~> 5.0.2)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
+
+DEPENDENCIES:
+  - JNAvatarWithInitials
+
+SPEC REPOS:
+  trunk:
+    - JNAvatarWithInitials
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  JNAvatarWithInitials: 7ba52efafe450b6499c28760d1075b4eb9e68bb9
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+
+PODFILE CHECKSUM: 0e81b7930ff893265cd9374b86fd66517ab5c794
+
+COCOAPODS: 1.8.3
