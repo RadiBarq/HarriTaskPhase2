@@ -20,7 +20,7 @@ extension TableViewModel {
      func numberOfSections() -> Int {
         return 1
     }
-
+    
     func numberOfRows(inSection section: Int) -> Int {
         return 0
     }

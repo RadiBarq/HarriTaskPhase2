@@ -22,6 +22,7 @@ class HomeTableViewCell: UITableViewCell {
     
     func setupImage() {
         profileImage.layer.masksToBounds = true
+        profileImage.layer.backgroundColor = UIColor.red.cgColor
         profileImage.layer.cornerRadius = 25
     }
     
@@ -30,26 +31,13 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setFirstJobFont() {
-        jobLabel.font = UIFont(name: "OpenSans-Italic", size: 12)
-        jobLabel.text = "Is looking for their first job"
-        jobLabel.textColor = UIColor(red: 74/255, green: 74/255, blue: 74/255, alpha: 1)
-    }
-    
-    func setAttributedJobFont(positionName: String, positionBrand: String) {
-        let attributedText = NSMutableAttributedString(string: positionName, attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Semibold", size: 14)!])
-        attributedText.append(NSMutableAttributedString(string: ", ", attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Semibold", size: 14)!]))
-        attributedText.append(NSAttributedString(string: positionName, attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans", size: 14)!, NSAttributedString.Key.foregroundColor: UIColor.black]))
-        jobLabel.attributedText = attributedText
-    }
-
     func setup(representable: HomeTableViewRepresentable) {
         self.nameLabel.text = representable.fullName
         self.jobLabel.attributedText = representable.position
-        self.profileImage.setup(imageUrl: representable.imageURL, fullName: "Profile Image")
+        self.profileImage.setup(imageUrl: representable.imageURL, placeHolderImage: UIImage(systemName: "arkit"), fullName: "Profile Image", showInitails: true)
     }
     
-    class func getReuseIdentifier() -> String {
+    static func getReuseIdentifier() -> String {
         return "HomeTableViewCell"
     }
 }

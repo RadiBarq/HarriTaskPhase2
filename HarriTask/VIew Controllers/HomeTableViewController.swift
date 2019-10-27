@@ -15,6 +15,16 @@ class HomeTableViewController: UITableViewController {
     // Home view model
     var viewModel = HomeTableViewModel(items: [])
     
+    var customRefreshControl: UIRefreshControl = {
+        var refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor(red: 74/255 , green: 144/255, blue: 226/255, alpha: 255/255)
+        return refreshControl
+    }()
+    
+    var tableHeaderView: UIView? = {
+        UIView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: Double(Float.leastNormalMagnitude)))
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -84,11 +94,8 @@ class HomeTableViewController: UITableViewController {
     }
     // Setup table view
     func setupTableView() {
-        self.refreshControl = viewModel.customRefreshControl
+        self.refreshControl = customRefreshControl
         refreshControl?.addTarget(self, action: #selector(getInitialData), for: UIControl.Event.valueChanged)
-        self.tableView.tableHeaderView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 0.0, height: Double(Float.leastNormalMagnitude)))
+        self.tableView.tableHeaderView = tableHeaderView
     }
 }
-
-
-

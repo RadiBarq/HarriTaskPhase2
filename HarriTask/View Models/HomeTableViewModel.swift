@@ -12,12 +12,6 @@ struct HomeTableViewModel {
     var representables = [HomeTableViewRepresentable]()
     var items: [UserSearchResult]
     
-    var customRefreshControl: UIRefreshControl = {
-        var refreshControl = UIRefreshControl()
-        refreshControl.tintColor = UIColor(red: 74/255 , green: 144/255, blue: 226/255, alpha: 255/255)
-        return refreshControl
-    }()
-    
     init(items: [UserSearchResult]) {
         self.items = items
     }
@@ -48,14 +42,11 @@ extension HomeTableViewModel: TableViewModel {
     }
     
     func viewForFooterInSection(inSection section: Int) -> UIView? {
-        if !customRefreshControl.isRefreshing {
             let footerView = HomeTableFooterView()
             return footerView
-        }
-        return nil
     }
     
     func shouldSpringLoadRowAt(at indexPath: IndexPath) -> Bool {
-        return true
+        return false
     }
 }

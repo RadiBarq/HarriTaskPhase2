@@ -9,7 +9,6 @@
 import Foundation
 
 class UserSearchBodyData: Encodable {
-    
     let size: Int
     let start: Int
     let locations: Array<String>
@@ -19,5 +18,4 @@ class UserSearchBodyData: Encodable {
         self.start = start
         self.locations = locations
     }
-    
 }

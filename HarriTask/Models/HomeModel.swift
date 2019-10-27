@@ -29,17 +29,5 @@ class HomeModel {
             }
         }
     }
-    
-    func refreshUserSearchData(completion: @escaping(Array<UserSearchResult>) -> Void) {
-        self.result = [UserSearchResult]()
-        self.getUserSearch(start: 0) { result in
-            completion(result)
-        }
-    }
-    
-    func getImageURLFor(userId: Int, imageUDID: String) -> String {
-        let imageURL = "https://d7f8bv52wga7t.cloudfront.net/users/" + String(userId) + "/user_profile/" + imageUDID + "/240_240.jpeg"
-        return imageURL
-    }
 }
 

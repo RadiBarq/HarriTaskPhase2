@@ -8,7 +8,9 @@
 
 import Foundation
 struct NetworkManager {
-    var userSeachURL = URL(string: "https://api.harridev.com/api/v1/harri_search/search_users")
+    let userSeachURL = URL(string: "https://api.harridev.com/api/v1/harri_search/search_users")
+    static let imageURLString = "https://d7f8bv52wga7t.cloudfront.net/users/"
+    
     func getUserSearch(bodyData: UserSearchBodyData, completion: @escaping(Result<UserSearchResponse, APIError>) -> Void) {
         do {
             guard let url = userSeachURL else { return }
@@ -22,9 +24,6 @@ struct NetworkManager {
                     return
                 }
                 do {
-                    if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
-                                         print(JSONString)
-                        }
                     let decoder = JSONDecoder()
                     let response = try decoder.decode(UserSearchResponse.self, from: jsonData)
                     completion(.success(response))

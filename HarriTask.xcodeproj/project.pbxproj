@@ -26,9 +26,17 @@
 		4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */; };
 		4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */; };
 		4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */; };
+		4B7913212361B8A0005C9613 /* UserExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913202361B8A0005C9613 /* UserExperienceTableViewCell.swift */; };
+		4B7913232361C074005C9613 /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913222361C074005C9613 /* UserProfileTableViewController.swift */; };
+		4B7913252361C818005C9613 /* UserProfileTableViewControllerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */; };
+		4B7913272361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */; };
+		4B7913292361E44E005C9613 /* UserProfileCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */; };
+		4B79132F2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */; };
+		4B7913312361F042005C9613 /* UserProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */; };
 		4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */; };
 		4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */; };
 		4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC58A0235710E200412F10 /* TableViewModel.swift */; };
+		4BEE3CEE23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */; };
 		8B5735C0EA99DD1B94212766 /* Pods_HarriTask_HarriTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB06F5460C475CCD936D51 /* Pods_HarriTask_HarriTaskUITests.framework */; };
 		9531E7902C9CA259FAB64BCD /* Pods_HarriTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */; };
 		CAAFABEC7340D05D96CC31F8 /* Pods_HarriTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */; };
@@ -77,9 +85,17 @@
 		4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		4B7913202361B8A0005C9613 /* UserExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		4B7913222361C074005C9613 /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
+		4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewControllerHeader.swift; sourceTree = "<group>"; };
+		4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCellCollectionViewController.swift; sourceTree = "<group>"; };
+		4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileWithCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 		4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewRepresentable.swift; sourceTree = "<group>"; };
 		4BEC58A0235710E200412F10 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileWithCollectionViewTableViewCell.xib; sourceTree = "<group>"; };
 		533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D502FAD4C687378CB4D951A /* Pods-HarriTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask.release.xcconfig"; path = "Target Support Files/Pods-HarriTask/Pods-HarriTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +160,7 @@
 		4B411CA3234F8686008FE67D /* HarriTask */ = {
 			isa = PBXGroup;
 			children = (
+				4B411CB2234F8689008FE67D /* Info.plist */,
 				4BEC58A82357285E00412F10 /* Representables */,
 				4BEC58A72357282A00412F10 /* Cells */,
 				4BEC58A62357276100412F10 /* Helpers */,
@@ -209,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				4B411CD4234F8723008FE67D /* HomeTableViewController.swift */,
+				4B7913222361C074005C9613 /* UserProfileTableViewController.swift */,
+				4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
@@ -220,6 +239,8 @@
 				4B411CE82353470B008FE67D /* HomeTableFooterView.swift */,
 				4B411CAA234F8687008FE67D /* Main.storyboard */,
 				4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */,
+				4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */,
+				4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,7 +251,6 @@
 				4B411CA6234F8686008FE67D /* SceneDelegate.swift */,
 				4B411CA4234F8686008FE67D /* AppDelegate.swift */,
 				4B411CE223532406008FE67D /* NetworkManager.swift */,
-				4B411CB2234F8689008FE67D /* Info.plist */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,6 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				4B411CD623530E11008FE67D /* HomeTableViewCell.swift */,
+				4B7913202361B8A0005C9613 /* UserExperienceTableViewCell.swift */,
+				4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */,
+				4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */,
+				4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -388,6 +412,7 @@
 				4B411CE523534299008FE67D /* HomeTableFooterView.xib in Resources */,
 				4B411CAC234F8687008FE67D /* Main.storyboard in Resources */,
 				4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */,
+				4BEE3CEE23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib in Resources */,
 				4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */,
 				4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */,
 			);
@@ -520,16 +545,23 @@
 				4B411CE323532406008FE67D /* NetworkManager.swift in Sources */,
 				4B411CD5234F8723008FE67D /* HomeTableViewController.swift in Sources */,
 				4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */,
+				4B7913232361C074005C9613 /* UserProfileTableViewController.swift in Sources */,
 				4B411CE12353216D008FE67D /* HomeModel.swift in Sources */,
+				4B7913252361C818005C9613 /* UserProfileTableViewControllerHeader.swift in Sources */,
 				4B411CE92353470B008FE67D /* HomeTableFooterView.swift in Sources */,
 				4B411CDD235319B3008FE67D /* UserSearchResponse.swift in Sources */,
+				4B79132F2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift in Sources */,
+				4B7913312361F042005C9613 /* UserProfileCollectionViewCell.swift in Sources */,
 				4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */,
+				4B7913292361E44E005C9613 /* UserProfileCellCollectionViewController.swift in Sources */,
 				4B411CD723530E11008FE67D /* HomeTableViewCell.swift in Sources */,
 				4B411CDF23531B21008FE67D /* APIError.swift in Sources */,
 				4B411CA7234F8686008FE67D /* SceneDelegate.swift in Sources */,
 				4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */,
+				4B7913212361B8A0005C9613 /* UserExperienceTableViewCell.swift in Sources */,
 				4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */,
 				4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */,
+				4B7913272361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S7V735958;
 				INFOPLIST_FILE = HarriTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -725,6 +758,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S7V735958;
 				INFOPLIST_FILE = HarriTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

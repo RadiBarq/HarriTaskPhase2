@@ -35,5 +35,3 @@ class Position: Decodable {
     let brandName: String
     let name: String
 }
-
-
