@@ -8,41 +8,63 @@
 
 import UIKit
 
-class UserProfileTableViewController: UITableViewController {
+class UserProfileTableViewController: UITableViewController, UITableViewCellDelegate {
+    
+    func didChangeHeight() {
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        tableView.register(UserProfileTableViewControllerHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewHeaderCell.)
+        tableView.register(UserProfileTableViewControllerHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewControllerHeader.getReuseIdentifier())
+        tableView.register(UserProfileTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier())
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 66.0
+        if section == 0 {
+            return 271
+        } else {
+            return 66.0
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        if section == 0 {
+            return 0
+        } else {
+            return 10
+        }
     }
-
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileTableViewHeaderCell.getReuseIdentifier()) as! UserProfileTableViewControllerHeader
-        headerView.customLabel.text = "Experience"
+        if section == 0 {
+            return tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier())
+        }
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier())
         return headerView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "UserExperienceCell", for: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier:  UserProfileTableViewHeaderCell.getReuseIdentifier(), for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
+        cell.delegate = self
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
     
     /*

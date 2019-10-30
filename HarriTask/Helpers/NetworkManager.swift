@@ -8,6 +8,7 @@
 
 import Foundation
 struct NetworkManager {
+    
     let userSeachURL = URL(string: "https://api.harridev.com/api/v1/harri_search/search_users")
     static let imageURLString = "https://d7f8bv52wga7t.cloudfront.net/users/"
     

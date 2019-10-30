@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-HarriTask-HarriTaskUITests/Pods-HarriTask-HarriTaskUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/JNAvatarWithInitials/JNAvatarWithInitials.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

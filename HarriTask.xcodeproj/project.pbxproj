@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1405BB2369AF2C00D064F1 /* AlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BA2369AF2C00D064F1 /* AlamoFireManager.swift */; };
+		4B1405BD2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */; };
+		4B1405BF2369CFC300D064F1 /* UITableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */; };
 		4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CA4234F8686008FE67D /* AppDelegate.swift */; };
 		4B411CA7234F8686008FE67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B411CA6234F8686008FE67D /* SceneDelegate.swift */; };
 		4B411CAC234F8687008FE67D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CAA234F8687008FE67D /* Main.storyboard */; };
@@ -26,6 +29,8 @@
 		4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */; };
 		4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */; };
 		4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */; };
+		4B72C6002365EF35006B9820 /* UserProfileTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */; };
+		4B72C6022365F6FF006B9820 /* UserProfileTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C6012365F6FF006B9820 /* UserProfileTableViewHeaderView.swift */; };
 		4B7913212361B8A0005C9613 /* UserExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913202361B8A0005C9613 /* UserExperienceTableViewCell.swift */; };
 		4B7913232361C074005C9613 /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913222361C074005C9613 /* UserProfileTableViewController.swift */; };
 		4B7913252361C818005C9613 /* UserProfileTableViewControllerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */; };
@@ -60,6 +65,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B1405BA2369AF2C00D064F1 /* AlamoFireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireManager.swift; sourceTree = "<group>"; };
+		4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
+		4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellDelegate.swift; sourceTree = "<group>"; };
 		4B411CA1234F8686008FE67D /* HarriTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarriTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B411CA4234F8686008FE67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B411CA6234F8686008FE67D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +93,8 @@
 		4B411CEC235372B3008FE67D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		4B411CEE2353731D008FE67D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewHeaderView.xib; sourceTree = "<group>"; };
+		4B72C6012365F6FF006B9820 /* UserProfileTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewHeaderView.swift; sourceTree = "<group>"; };
 		4B7913202361B8A0005C9613 /* UserExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		4B7913222361C074005C9613 /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
 		4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewControllerHeader.swift; sourceTree = "<group>"; };
@@ -241,6 +251,8 @@
 				4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */,
 				4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */,
 				4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */,
+				4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */,
+				4B72C6012365F6FF006B9820 /* UserProfileTableViewHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +263,7 @@
 				4B411CA6234F8686008FE67D /* SceneDelegate.swift */,
 				4B411CA4234F8686008FE67D /* AppDelegate.swift */,
 				4B411CE223532406008FE67D /* NetworkManager.swift */,
+				4B1405BA2369AF2C00D064F1 /* AlamoFireManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -263,6 +276,8 @@
 				4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */,
 				4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */,
 				4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */,
+				4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */,
+				4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -412,6 +427,7 @@
 				4B411CE523534299008FE67D /* HomeTableFooterView.xib in Resources */,
 				4B411CAC234F8687008FE67D /* Main.storyboard in Resources */,
 				4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */,
+				4B72C6002365EF35006B9820 /* UserProfileTableViewHeaderView.xib in Resources */,
 				4BEE3CEE23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib in Resources */,
 				4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */,
 				4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */,
@@ -546,6 +562,7 @@
 				4B411CD5234F8723008FE67D /* HomeTableViewController.swift in Sources */,
 				4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */,
 				4B7913232361C074005C9613 /* UserProfileTableViewController.swift in Sources */,
+				4B1405BF2369CFC300D064F1 /* UITableViewCellDelegate.swift in Sources */,
 				4B411CE12353216D008FE67D /* HomeModel.swift in Sources */,
 				4B7913252361C818005C9613 /* UserProfileTableViewControllerHeader.swift in Sources */,
 				4B411CE92353470B008FE67D /* HomeTableFooterView.swift in Sources */,
@@ -553,6 +570,7 @@
 				4B79132F2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift in Sources */,
 				4B7913312361F042005C9613 /* UserProfileCollectionViewCell.swift in Sources */,
 				4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */,
+				4B72C6022365F6FF006B9820 /* UserProfileTableViewHeaderView.swift in Sources */,
 				4B7913292361E44E005C9613 /* UserProfileCellCollectionViewController.swift in Sources */,
 				4B411CD723530E11008FE67D /* HomeTableViewCell.swift in Sources */,
 				4B411CDF23531B21008FE67D /* APIError.swift in Sources */,
@@ -561,6 +579,8 @@
 				4B7913212361B8A0005C9613 /* UserExperienceTableViewCell.swift in Sources */,
 				4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */,
 				4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */,
+				4B1405BD2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift in Sources */,
+				4B1405BB2369AF2C00D064F1 /* AlamoFireManager.swift in Sources */,
 				4B7913272361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

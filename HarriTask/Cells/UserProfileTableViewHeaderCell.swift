@@ -8,28 +8,39 @@
 
 import UIKit
 
-class UserProfileTableViewHeaderCell: UITableViewCell {
-    @IBOutlet var backgroundImageView: UIImageView!
+class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView {
+//    @IBOutlet var backgroundImageView: UIImageView!
+//    @IBOutlet var profileImageView: UIImageView!
+//    @IBOutlet var nameLabel: UILabel!
+//    @IBOutlet var jobLabel: UILabel!
+//    @IBOutlet var commentButton: UIButton!
+//    @IBOutlet var messageButton: UIButton!
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var jobLabel: UILabel!
+    @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var commentButton: UIButton!
-    @IBOutlet var messageButton: UIButton!
+    @IBOutlet var sendMessageButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        setupCell()
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setup()
     }
-
-    func setupCell() {
+    
+    required init?(coder: NSCoder) {
+           fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup() {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = 32
         profileImageView.layer.borderColor = UIColor.white.cgColor
+        profileImageView.layer.borderColor = UIColor.white.cgColor
+        profileImageView.layer.borderWidth = 2
+
         commentButton.layer.masksToBounds = true
         commentButton.layer.cornerRadius = 21
-        messageButton.layer.masksToBounds = true
-        messageButton.layer.cornerRadius = 21
+        sendMessageButton.layer.masksToBounds = true
+        sendMessageButton.layer.cornerRadius = 21
     }
     
     class func getReuseIdentifier() -> String {
