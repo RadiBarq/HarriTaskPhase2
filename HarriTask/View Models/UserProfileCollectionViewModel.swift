@@ -5,19 +5,27 @@
 //  Created by Harri on 11/3/19.
 //  Copyright © 2019 Harri. All rights reserved.
 //
-
 import Foundation
 
-class UserProfileCollectionViewModel: BaseViewModel {
-      var representables: [BaseCellRepresentable]
-      var items: [String]
-      init(items: [String]) {
-        
+class UserProfileCollectionViewModel {
+    var representables: [UserProfileCollectionViewCellRepresentable]
+    var items: [String]
+    required init(items: [String]) {
+        self.items = items
+        representables = []
+    }
+    func representableForRow(at indexPath: IndexPath) -> BaseCellRepresentable?{
+        return nil
+    }
+    func buildRepresentables(from start: Int) {
+        for item in items {
+            representables.append(UserProfileCollectionViewCellRepresentable(item: item))
         }
-      func representableForRow(at indexPath: IndexPath) -> BaseCellRepresentable {
-            
+    }
+}
+
+extension UserProfileCollectionViewModel: TableViewModel {
+    func numberOfRows(inSection section: Int) -> Int {
+          self.representables.count
       }
-      func buildRepresentables(from start: Int) {
-        
-        }
 }

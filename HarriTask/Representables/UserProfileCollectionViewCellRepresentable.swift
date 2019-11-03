@@ -1,5 +1,5 @@
 //
-//  UserProfileAvailabilityRepresentable.swift
+//  CollectionViewBaseRepresentable.swift
 //  HarriTask
 //
 //  Created by Harri on 11/3/19.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class UserProfileAvailabilityRepresentable: BaseCellRepresentable {
+class UserProfileCollectionViewCellRepresentable: BaseCollectionViewRepresentable {
     let cellReuseIdentifier: String
-    let titleString: String
-    init(item: String) {
-        availabilityString = item
+    let title: String 
+    required init(item: String) {
+        title = item
         cellReuseIdentifier = UserProfileWithCollectionViewTableViewCell.getReuseIdentifier()
     }
 }

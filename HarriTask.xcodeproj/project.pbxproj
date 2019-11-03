@@ -40,10 +40,9 @@
 		4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */; };
 		4B58D996236EC66C00793BDD /* UserProfileAboutRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D995236EC66C00793BDD /* UserProfileAboutRepresentable.swift */; };
 		4B58D998236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D997236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift */; };
-		4B58D99A236ECF1200793BDD /* UserProfileSkillRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D999236ECF1200793BDD /* UserProfileSkillRepresentable.swift */; };
+		4B58D99A236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */; };
 		4B58D99C236ED28900793BDD /* UserProfileExperienceRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */; };
 		4B58D9A0236ED7E100793BDD /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D99F236ED7E000793BDD /* BaseCell.swift */; };
-		4B58D9A2236F195700793BDD /* UserProfileAvailabilityRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D9A1236F195700793BDD /* UserProfileAvailabilityRepresentable.swift */; };
 		4B58D9A4236F273600793BDD /* UserProfileCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D9A3236F273600793BDD /* UserProfileCollectionViewModel.swift */; };
 		4B58D9A6236F295D00793BDD /* BaseCollectionViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D9A5236F295D00793BDD /* BaseCollectionViewRepresentable.swift */; };
 		4B72C6002365EF35006B9820 /* UserProfileTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */; };
@@ -121,10 +120,9 @@
 		4B411CF02353732F008FE67D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		4B58D995236EC66C00793BDD /* UserProfileAboutRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAboutRepresentable.swift; sourceTree = "<group>"; };
 		4B58D997236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellWithTitleRepresentable.swift; sourceTree = "<group>"; };
-		4B58D999236ECF1200793BDD /* UserProfileSkillRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSkillRepresentable.swift; sourceTree = "<group>"; };
+		4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewCellRepresentable.swift; sourceTree = "<group>"; };
 		4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileExperienceRepresentable.swift; sourceTree = "<group>"; };
 		4B58D99F236ED7E000793BDD /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
-		4B58D9A1236F195700793BDD /* UserProfileAvailabilityRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAvailabilityRepresentable.swift; sourceTree = "<group>"; };
 		4B58D9A3236F273600793BDD /* UserProfileCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewModel.swift; sourceTree = "<group>"; };
 		4B58D9A5236F295D00793BDD /* BaseCollectionViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewRepresentable.swift; sourceTree = "<group>"; };
 		4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewHeaderView.xib; sourceTree = "<group>"; };
@@ -333,9 +331,8 @@
 				4B0EFC08236B2C6400B450B6 /* BaseUserProfileRepresentable.swift */,
 				4B0EFC0A236B2F6900B450B6 /* BaseRepresentable.swift */,
 				4B58D995236EC66C00793BDD /* UserProfileAboutRepresentable.swift */,
-				4B58D999236ECF1200793BDD /* UserProfileSkillRepresentable.swift */,
+				4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */,
 				4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */,
-				4B58D9A1236F195700793BDD /* UserProfileAvailabilityRepresentable.swift */,
 				4B58D9A5236F295D00793BDD /* BaseCollectionViewRepresentable.swift */,
 			);
 			path = Representables;
@@ -642,11 +639,10 @@
 				4B0EFC0B236B2F6900B450B6 /* BaseRepresentable.swift in Sources */,
 				4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */,
 				4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */,
-				4B58D99A236ECF1200793BDD /* UserProfileSkillRepresentable.swift in Sources */,
+				4B58D99A236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift in Sources */,
 				4B0EFC07236B2B5C00B450B6 /* UserProfileHeaderRepresentable.swift in Sources */,
 				4B0EFBFB2369E65800B450B6 /* UserProfileResponse.swift in Sources */,
 				4B1405BD2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift in Sources */,
-				4B58D9A2236F195700793BDD /* UserProfileAvailabilityRepresentable.swift in Sources */,
 				4B1405BB2369AF2C00D064F1 /* AlamoFireManager.swift in Sources */,
 				4B7913272361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift in Sources */,
 				4B58D9A4236F273600793BDD /* UserProfileCollectionViewModel.swift in Sources */,

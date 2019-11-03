@@ -8,31 +8,33 @@
 
 import UIKit
 
-class UserProfileWithCollectionViewTableViewCell: UITableViewCell, BaseCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHieght: NSLayoutConstraint!
+    var model = [String]()
+    var viewModel: UserProfileCollectionViewModel
     
-    var textArray = [UserSkill]()
-    
-    func setup(representable: UserProfileSkillRepresentable) {
-        self.textArray = representable.titleArray
+    // need to be fixed in this case.
+    func setup(representable: UserProfileCollectionViewCellRepresentable, model: [String]) {
+        self.model = model
+        viewModel = UserProfileCollectionViewModel(items: model)
         self.collectionView.reloadData()
         self.calculateHeight()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        textArray.count
+        self.viewModel.numberOfRows(inSection: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserProfileCollectionViewCell", for: indexPath) as! UserProfileCollectionViewCell
-        cell.skillTitle.text = textArray[indexPath.row].name
+        cell.skillTitle.text = model[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: textArray[indexPath.row].name.size(withAttributes: [
+        return CGSize(width: model[indexPath.row].size(withAttributes: [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 35, height: 32)
     }
     
@@ -61,10 +63,14 @@ class UserProfileWithCollectionViewTableViewCell: UITableViewCell, BaseCell, UIC
         self.layoutIfNeeded()
     }
     
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    
 }
 
 class UserProfileWithCollectionViewCellFlowLayout: UICollectionViewFlowLayout {

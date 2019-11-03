@@ -71,7 +71,6 @@ struct UserSkill: Decodable {
     let name: String
 }
 
-
 struct UserInfo: Decodable {
     let username: String
     let about: String
