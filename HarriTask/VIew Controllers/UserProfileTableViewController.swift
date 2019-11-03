@@ -9,18 +9,16 @@
 import UIKit
 
 class UserProfileTableViewController: UITableViewController, UITableViewCellDelegate {
+    let model = UserProfileModel(userId: "66811")
     
-    func didChangeHeight() {
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        model.getUserProfile() { result in
+            switch result {
+            case .success(let response): print(response)
+            case .failure(let error): print(error)
+            }
+        }
         tableView.register(UserProfileTableViewControllerHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewControllerHeader.getReuseIdentifier())
         tableView.register(UserProfileTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier())
     }
@@ -38,7 +36,7 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
             return 66.0
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
@@ -58,57 +56,31 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "UserExperienceCell", for: indexPath)
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
-        cell.delegate = self
+        let cell: UITableViewCell
+        
+//        switch indexPath.section {
+//        case 1:
+//            cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
+//        case 2:
+//        case 3:
+//        case 4:
+//        default:
+//            return
+        
+        cell = UITableViewCell()
         return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
+//        cell.delegate = self
+//        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func didChangeHeight() {
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

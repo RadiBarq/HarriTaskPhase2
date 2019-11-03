@@ -9,28 +9,42 @@
 import Foundation
 import UIKit
 
-struct HomeTableViewRepresentable {
+class HomeTableViewRepresentable: BaseCellRepresentable {
     var fullName = String()
     var position = NSMutableAttributedString()
     var cellReuseIdentifier = HomeTableViewCell.getReuseIdentifier()
     var imageURL = String()
-
-    init(firstName: String, lastName: String, position: Position?, isFirstJob: Bool, userId: Int, imageUUID: String?) {
-        setFullName(firstName: firstName, lastName: lastName)
-        setImageURLFor(userId: userId, imageUUID: imageUUID)
-        
-        if let position = position {
-            setJobPosition(isFirstJob: isFirstJob, positionName: position.name, positionBrand: position.brandName)
+    
+    required init(item: UserSearchResult) {
+        setFullName(firstName: item.firstName, lastName: item.lastName)
+        setImageURLFor(userId: item.id, imageUUID: item.profileImageUUID)
+        if let position = item.position {
+            setJobPosition(isFirstJob: item.isFirstJob, positionName: position.name, positionBrand: position.brandName)
         } else {
             setFirstJobPosition()
         }
     }
     
-    private mutating func setFullName(firstName: String, lastName: String) {
+    //    init(firstName: String, lastName: String, position: Position?, isFirstJob: Bool, userId: Int, imageUUID: String?) {
+    //
+    //
+    //        guard let searchResult =
+    //
+    //        setFullName(firstName: firstName, lastName: lastName)
+    //        setImageURLFor(userId: userId, imageUUID: imageUUID)
+    //
+    //        if let position = position {
+    //            setJobPosition(isFirstJob: isFirstJob, positionName: position.name, positionBrand: position.brandName)
+    //        } else {
+    //            setFirstJobPosition()
+    //        }
+    //    }
+    //
+    private func setFullName(firstName: String, lastName: String) {
         fullName = firstName + " " + lastName
     }
     
-    private mutating func setJobPosition(isFirstJob: Bool, positionName: String, positionBrand: String) {
+    private func setJobPosition(isFirstJob: Bool, positionName: String, positionBrand: String) {
         if isFirstJob {
             setFirstJobPosition()
         } else {
@@ -40,13 +54,13 @@ struct HomeTableViewRepresentable {
         }
     }
     
-    private mutating func setFirstJobPosition() {
+    private func setFirstJobPosition() {
         var attributedText = NSMutableAttributedString()
         attributedText = NSMutableAttributedString(string: "Is looking for their first job", attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans-Italic", size: 12)!, NSAttributedString.Key.foregroundColor: UIColor.black])
         self.position = attributedText
     }
     
-    private mutating func setImageURLFor(userId: Int, imageUUID: String?) {
+    private func setImageURLFor(userId: Int, imageUUID: String?) {
         if let imageUUID = imageUUID {
             let imageURL = NetworkManager.imageURLString + String(userId) + "/user_profile/" + imageUUID + "/240_240.jpeg"
             self.imageURL = imageURL

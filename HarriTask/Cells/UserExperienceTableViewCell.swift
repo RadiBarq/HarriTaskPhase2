@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserExperienceTableViewCell: UITableViewCell {
+class UserExperienceTableViewCell: UITableViewCell, BaseCell {
     @IBOutlet weak var brandName: UILabel!
     @IBOutlet weak var jobTilte: UILabel!
     @IBOutlet weak var jobDescription: UILabel!
@@ -22,6 +22,12 @@ class UserExperienceTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+    
+    func setup(representable: UserProfileExperienceRepresentable) {
+        jobTilte.text = representable.positionTitle
+        brandName.text = representable.brandName
+        jobDescription.text = representable.positionDescription
+     }
     
     class func getReuseIdentifier() -> String {
           return "UserExperienceTableViewCell"

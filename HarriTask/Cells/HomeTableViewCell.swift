@@ -9,7 +9,7 @@
 import UIKit
 import JNAvatarWithInitials
 
-class HomeTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell, BaseCell{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
     @IBOutlet weak var profileImage: JNAvatarWithInitials!

@@ -80,7 +80,6 @@ class HomeTableViewController: UITableViewController {
             }
         }
     }
-    
     // Get inital data
     @objc func getInitialData() {
         homeModel.getUserSearch(start: 0) { result in

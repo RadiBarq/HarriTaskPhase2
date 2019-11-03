@@ -8,25 +8,29 @@
 
 import Foundation
 import UIKit
-struct HomeTableViewModel {
-    var representables = [HomeTableViewRepresentable]()
-    var items: [UserSearchResult]
+
+class HomeTableViewModel: BaseViewModel {
     
-    init(items: [UserSearchResult]) {
-        self.items = items
-    }
-    
-    mutating func add(items: [UserSearchResult]) {
-        self.items += items
-    }
+    var representables: [HomeTableViewRepresentable]
     
     func representableForRow(at indexPath: IndexPath) -> HomeTableViewRepresentable? {
-        indexPath.row >= 0 ? self.representables[indexPath.row] : nil
+            indexPath.row >= 0 ? self.representables[indexPath.row] : nil
     }
     
-    mutating func buildRepresentables(from start: Int) {
+    var items: [UserSearchResult]
+
+    required init(items: [UserSearchResult]) {
+        self.items = items
+        representables = []
+    }
+    
+     func add(items: [UserSearchResult]) {
+        self.items += items
+    }
+
+    func buildRepresentables(from start: Int) {
         for item in items[start..<items.count] {
-            let representable = HomeTableViewRepresentable(firstName: item.firstName, lastName: item.lastName, position: item.position, isFirstJob: item.isFirstJob, userId: item.id, imageUUID: item.profileImageUUID)
+            let representable = HomeTableViewRepresentable(item: item)
             self.representables.append(representable)
         }
     }

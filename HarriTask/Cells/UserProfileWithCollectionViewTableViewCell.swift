@@ -8,42 +8,55 @@
 
 import UIKit
 
-class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class UserProfileWithCollectionViewTableViewCell: UITableViewCell, BaseCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHieght: NSLayoutConstraint!
     
-    let textArray = ["Buddy's Tribeca", "Fine dining casual", "Microsoft office", "Microsoft office", "Microsoft office"]
+    var textArray = [UserSkill]()
+    
+    func setup(representable: UserProfileSkillRepresentable) {
+        self.textArray = representable.titleArray
+        self.collectionView.reloadData()
+        self.calculateHeight()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         textArray.count
-     }
+    }
     
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserProfileCollectionViewCell", for: indexPath) as! UserProfileCollectionViewCell
-         cell.skillTitle.text = textArray[indexPath.row]
-         return cell
-     }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserProfileCollectionViewCell", for: indexPath) as! UserProfileCollectionViewCell
+        cell.skillTitle.text = textArray[indexPath.row].name
+        return cell
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: textArray[indexPath.row].size(withAttributes: [
+        return CGSize(width: textArray[indexPath.row].name.size(withAttributes: [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 35, height: 32)
     }
     
+    static func getReuseIdentifier() -> String {
+        return "UserProfileWithCollectionViewTableViewCell"
+    }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//            let label = UILabel(frame: CGRect.zero)
-//            label.text = textArray[indexPath.item]
-//            label.sizeToFit()
-//            return CGSize(width: label.frame.width, height: 32)
-//    }
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //            let label = UILabel(frame: CGRect.zero)
+    //            label.text = textArray[indexPath.item]
+    //            label.sizeToFit()
+    //            return CGSize(width: label.frame.width, height: 32)
+    //    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-         let height = collectionView.collectionViewLayout.collectionViewContentSize.height
+        calculateHeight()
+    }
+    
+    func calculateHeight() {
+        let height = collectionView.collectionViewLayout.collectionViewContentSize.height
         collectionViewHieght.constant = height
         self.layoutIfNeeded()
     }

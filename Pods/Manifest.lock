@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0-rc.3)
+  - Alamofire (4.9.1)
   - JNAvatarWithInitials (1.1.5):
     - SDWebImage (~> 5.0.2)
   - SDWebImage (5.0.6):
@@ -7,7 +7,7 @@ PODS:
   - SDWebImage/Core (5.0.6)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-rc.3)
+  - Alamofire
   - JNAvatarWithInitials
 
 SPEC REPOS:
@@ -17,10 +17,10 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   JNAvatarWithInitials: 7ba52efafe450b6499c28760d1075b4eb9e68bb9
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: 9cae9cef24b76dc8ef198d49aaad8e846f508d87
+PODFILE CHECKSUM: 0c7a2761ae224f30aafb9afae0703d1410b5c558
 
 COCOAPODS: 1.8.3
