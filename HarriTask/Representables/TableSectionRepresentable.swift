@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 class TableSectionRepresentable: BaseCellRepresentable {
+    var cellType: UIView.Type = UIView.self
     var cellReuseIdentifier: String = ""
     var cells: [BaseCellRepresentable] = []
     

@@ -22,5 +22,8 @@ class UserProfileCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 5
     }
     
+    func setup(representable: UserProfileCollectionViewCellRepresentable) {
+        self.skillTitle.text = representable.title
+    }
 }
 

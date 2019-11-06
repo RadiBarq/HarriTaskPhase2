@@ -6,8 +6,10 @@
 //  Copyright © 2019 Harri. All rights reserved.
 //
 import Foundation
+import UIKit
 
 class UserProfileExperienceRepresentable: BaseCellRepresentable {
+    var cellType: UIView.Type
     let cellReuseIdentifier: String
     let positionTitle: String
     let positionDescription: String
@@ -18,5 +20,6 @@ class UserProfileExperienceRepresentable: BaseCellRepresentable {
         positionDescription = item.description
         brandName = item.brand.name
         cellReuseIdentifier = UserExperienceTableViewCell.getReuseIdentifier()
+        cellType = UserExperienceTableViewCell.self
     }
 }

@@ -12,8 +12,7 @@ protocol BaseViewModel {
     associatedtype RepresentableType
     var representables: [RepresentableType] { get set }
     var items: [ItemType] { get set }
-    init(items: [ItemType])
-    func representableForRow(at indexPath: IndexPath) -> RepresentableType?
+    init(items: [ItemType]) 
     func buildRepresentables(from start: Int)
 }
 

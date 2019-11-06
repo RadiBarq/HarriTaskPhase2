@@ -9,14 +9,20 @@
 import UIKit
 
 class UserProfileTableViewController: UITableViewController, UITableViewCellDelegate {
-    let model = UserProfileModel(userId: "66811")
+    var model: UserProfileModel!
+    var viewModel: UserProfileTableViewModel! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model = UserProfileModel(userId: "66811")
+        viewModel = UserProfileTableViewModel(items: [])
         model.getUserProfile() { result in
             switch result {
-            case .success(let response): print(response)
-            case .failure(let error): print(error)
+            case .success(let response):
+                self.viewModel.add(items: [response])
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
             }
         }
         tableView.register(UserProfileTableViewControllerHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewControllerHeader.getReuseIdentifier())
@@ -26,24 +32,16 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        viewModel.numberOfSections()
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 271
-        } else {
-            return 66.0
-        }
+        viewModel.heightForRow(in: section)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
-            return 0
-        } else {
-            return 10
-        }
+        self.viewModel.numberOfRows(inSection: section)
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -55,29 +53,28 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "UserExperienceCell", for: indexPath)
-        let cell: UITableViewCell
-        
-//        switch indexPath.section {
-//        case 1:
-//            cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
-//        case 2:
-//        case 3:
-//        case 4:
-//        default:
-//            return
-        
-        cell = UITableViewCell()
-        return cell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier(), for: indexPath) as! UserProfileAboutTableViewCell
-//        cell.delegate = self
-//        return cell
+        print(indexPath.section)
+        if let cellRepresentable = self.viewModel.representableForRow(at: indexPath) {
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellRepresentable.cellReuseIdentifier, for: indexPath)
+            if let currentCell = cell as? UserProfileAboutTableViewCell {
+                currentCell.setup(representable: cellRepresentable)
+                return currentCell
+            } else if let currentCell = cell as? UserProfileWithCollectionViewTableViewCell {
+                currentCell.setup(representable: cellRepresentable)
+                return currentCell
+            } else if let currentCell = cell as? UserExperienceTableViewCell {
+                currentCell.setup(representable: cellRepresentable)
+                return currentCell
+            } else {
+                return UITableViewCell()
+            }
+        }
+        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
-    
     
     func didChangeHeight() {
         self.tableView.beginUpdates()

@@ -9,7 +9,7 @@
 import UIKit
 import JNAvatarWithInitials
 
-class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView, BaseCell {
+class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView {
     @IBOutlet var backgroundImageView: JNAvatarWithInitials!
     @IBOutlet var commentButton: UIButton!
     @IBOutlet var sendMessageButton: UIButton!
@@ -21,10 +21,11 @@ class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView, BaseCell {
         super.init(reuseIdentifier: reuseIdentifier)
         setupImages()
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setup(representable: UserProfileHeaderRepresentable) {
         nameLabel.text = representable.fullName
         jobLabel.text = representable.positionTitle
@@ -44,7 +45,7 @@ class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView, BaseCell {
         sendMessageButton.layer.cornerRadius = 21
     }
     
-    class func getReuseIdentifier() -> String {
+    static func getReuseIdentifier() -> String {
         return "UserProfileTableViewHeaderCell"
     }
 }

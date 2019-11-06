@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class HomeTableViewModel: BaseViewModel {
-    
     var representables: [HomeTableViewRepresentable]
     
     func representableForRow(at indexPath: IndexPath) -> HomeTableViewRepresentable? {

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class HomeTableViewRepresentable: BaseCellRepresentable {
+    var cellType: UIView.Type = UITableViewHeaderFooterView.self
     var fullName = String()
     var position = NSMutableAttributedString()
     var cellReuseIdentifier = HomeTableViewCell.getReuseIdentifier()

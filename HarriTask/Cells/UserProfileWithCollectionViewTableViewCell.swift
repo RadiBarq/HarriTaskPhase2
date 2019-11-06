@@ -8,29 +8,31 @@
 
 import UIKit
 
-class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class UserProfileWithCollectionViewTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHieght: NSLayoutConstraint!
-    var model = [String]()
-    var viewModel: UserProfileCollectionViewModel
-    
+    var model: Array<String>!
+    var viewModel: UserProfileCollectionViewModel!
+
     // need to be fixed in this case.
     func setup(representable: UserProfileCollectionViewCellRepresentable, model: [String]) {
         self.model = model
-        viewModel = UserProfileCollectionViewModel(items: model)
+        viewModel.add(items: model)
         self.collectionView.reloadData()
         self.calculateHeight()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.viewModel.numberOfRows(inSection: 0)
+            self.viewModel.numberOfRows(inSection: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserProfileCollectionViewCell", for: indexPath) as! UserProfileCollectionViewCell
-        cell.skillTitle.text = model[indexPath.row]
-        return cell
+        if let cellRepresentable = self.viewModel.representableForRow(at: indexPath), let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellRepresentable.cellReuseIdentifier, for: indexPath) as? UserProfileCollectionViewCell {
+            cell.setup(representable: cellRepresentable)
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -41,6 +43,7 @@ class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionV
     static func getReuseIdentifier() -> String {
         return "UserProfileWithCollectionViewTableViewCell"
     }
+    
     
     //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     //            let label = UILabel(frame: CGRect.zero)
@@ -54,6 +57,7 @@ class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionV
         // Initialization code
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.viewModel = UserProfileCollectionViewModel(items: [])
         calculateHeight()
     }
     
@@ -62,15 +66,6 @@ class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionV
         collectionViewHieght.constant = height
         self.layoutIfNeeded()
     }
-    
-    
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
-    
-    
 }
 
 class UserProfileWithCollectionViewCellFlowLayout: UICollectionViewFlowLayout {

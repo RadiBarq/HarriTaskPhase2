@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileAboutTableViewCell: UITableViewCell, BaseCell, UITextViewDelegate {
+class UserProfileAboutTableViewCell: BaseTableViewCell, UITextViewDelegate {
     @IBOutlet var textViewHeight: NSLayoutConstraint!
     @IBOutlet var textView: UITextView!
     weak var delegate: UITableViewCellDelegate?
