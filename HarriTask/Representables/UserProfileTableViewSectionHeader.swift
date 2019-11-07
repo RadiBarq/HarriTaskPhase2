@@ -20,7 +20,11 @@ class UserProfileHeaderRepresentable: BaseUserProfileRepresentable{
         self.fullName = item.userInfo.username
         self.backgroundImageURL = item.backgroundImage
         self.imageURL = item.profileImage
-        self.positionTitle = item.currentJob
+        if let currentJob = item.currentJob {
+            positionTitle = currentJob
+        } else {
+            positionTitle = "is looking for their first job"
+        }
         self.cellReuseIdentifier = UserProfileTableViewHeaderCell.getReuseIdentifier()
         cellType = UITableViewHeaderFooterView.self
     }

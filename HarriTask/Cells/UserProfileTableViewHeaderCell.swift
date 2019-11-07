@@ -16,7 +16,7 @@ class UserProfileTableViewHeaderCell: UITableViewHeaderFooterView {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var jobLabel: UILabel!
     @IBOutlet var profileImageView: JNAvatarWithInitials!
-
+    
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         setupImages()

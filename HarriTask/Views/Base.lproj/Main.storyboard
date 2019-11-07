@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QoH-l9-OVL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebk-Ee-kaJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -91,7 +91,7 @@
         <!--User Profile Table View Controller-->
         <scene sceneID="VUY-Ml-rNu">
             <objects>
-                <tableViewController id="QoH-l9-OVL" customClass="UserProfileTableViewController" customModule="HarriTask" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserProfileTableViewController" id="QoH-l9-OVL" customClass="UserProfileTableViewController" customModule="HarriTask" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="aDU-aE-sCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +223,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUQ-Fj-BeN" customClass="JNAvatarWithInitials" customModule="JNAvatarWithInitials">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="272.5"/>
+                                            <rect key="frame" x="-10" y="0.0" width="394" height="272.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="374" id="B6A-aT-2JT"/>
@@ -284,12 +284,12 @@
                                         <constraint firstItem="1N9-mt-MsM" firstAttribute="centerX" secondItem="KTI-GZ-yCr" secondAttribute="centerX" id="AYR-Tx-XAU"/>
                                         <constraint firstItem="1N9-mt-MsM" firstAttribute="leading" secondItem="KTI-GZ-yCr" secondAttribute="leadingMargin" id="Knr-FY-rY9"/>
                                         <constraint firstItem="oSn-E5-Sah" firstAttribute="top" secondItem="KTI-GZ-yCr" secondAttribute="topMargin" constant="77" id="Ovd-xW-JxI"/>
-                                        <constraint firstAttribute="trailing" secondItem="oUQ-Fj-BeN" secondAttribute="trailing" id="akW-qD-IZI"/>
+                                        <constraint firstAttribute="trailing" secondItem="oUQ-Fj-BeN" secondAttribute="trailing" constant="-10" id="akW-qD-IZI"/>
                                         <constraint firstItem="1N9-mt-MsM" firstAttribute="top" secondItem="HIa-pG-iDm" secondAttribute="bottom" constant="5" id="bbK-dt-h56"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1N9-mt-MsM" secondAttribute="trailing" id="gHd-XL-UBc"/>
                                         <constraint firstAttribute="bottom" secondItem="28y-FQ-x8a" secondAttribute="bottom" constant="4" id="k5t-ui-5VR"/>
                                         <constraint firstItem="HIa-pG-iDm" firstAttribute="centerX" secondItem="KTI-GZ-yCr" secondAttribute="centerX" id="keE-4S-Cob"/>
-                                        <constraint firstItem="oUQ-Fj-BeN" firstAttribute="leading" secondItem="KTI-GZ-yCr" secondAttribute="leading" id="mop-3Z-9Eh"/>
+                                        <constraint firstItem="oUQ-Fj-BeN" firstAttribute="leading" secondItem="KTI-GZ-yCr" secondAttribute="leading" constant="-10" id="mop-3Z-9Eh"/>
                                         <constraint firstItem="oUQ-Fj-BeN" firstAttribute="top" secondItem="KTI-GZ-yCr" secondAttribute="top" id="s7j-cf-FsN"/>
                                         <constraint firstItem="28y-FQ-x8a" firstAttribute="centerX" secondItem="KTI-GZ-yCr" secondAttribute="centerX" id="tKq-Fk-z9O"/>
                                         <constraint firstItem="HIa-pG-iDm" firstAttribute="leading" secondItem="KTI-GZ-yCr" secondAttribute="leadingMargin" id="yr4-Je-wxJ"/>
@@ -343,6 +343,7 @@
                             <outlet property="delegate" destination="QoH-l9-OVL" id="p3V-e7-tZ6"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="DpA-Zt-vEd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vi-oo-sX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

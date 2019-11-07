@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 
 class TableSectionRepresentable: BaseCellRepresentable {
-    var cellType: UIView.Type = UIView.self
-    var cellReuseIdentifier: String = ""
-    var cells: [BaseCellRepresentable] = []
+    var cellReuseIdentifier: String
+    var cells: [BaseCellRepresentable]
+    var headerTitle: String
     
-    init(cells: [BaseCellRepresentable]) {
+    init(cells: [BaseCellRepresentable], headerTitle: String) {
         self.cells = cells
+        self.headerTitle = headerTitle
+        cellReuseIdentifier = ""
     }
 }
 

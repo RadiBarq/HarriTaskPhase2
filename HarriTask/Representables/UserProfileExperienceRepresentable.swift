@@ -16,7 +16,11 @@ class UserProfileExperienceRepresentable: BaseCellRepresentable {
     let brandName: String
     
     required init (item: Work) {
-        positionTitle = item.customPosition
+        if let positionTitle = item.customPosition {
+            self.positionTitle = positionTitle
+        } else {
+            self.positionTitle = "Is looking for their first job"
+        }
         positionDescription = item.description
         brandName = item.brand.name
         cellReuseIdentifier = UserExperienceTableViewCell.getReuseIdentifier()

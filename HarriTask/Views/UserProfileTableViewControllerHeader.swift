@@ -8,8 +8,7 @@
 
 import UIKit
 
-class UserProfileTableViewControllerHeader: UITableViewHeaderFooterView {
-    
+class UserProfileTableViewSectionHeader: UITableViewHeaderFooterView {
     let customLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
@@ -20,24 +19,25 @@ class UserProfileTableViewControllerHeader: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        setup()
+        setupLabel()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        self.addSubview(customLabel)
+    func setup(representable: UserProfileSectionHeaderRepresentable) {
+        customLabel.text = representable.title
+    }
+    
+    func setupLabel() {
+        addSubview(customLabel)
         customLabel.translatesAutoresizingMaskIntoConstraints = false
         customLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         customLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        //detailTextLabel?.textColor = UIColor.black
-        //detailTextLabel?.textAlignment = .left
-        //detailTextLabel?.font = UIFont(name: "OpenSans-Semibold", size: 16)
     }
     
-    class func getReuseIdentifier() -> String {
-         return "UserProfileTableViewControllerHeader"
-     }
+    static func getReuseIdentifier() -> String {
+        return "UserProfileTableViewControllerHeader"
+    }
 }

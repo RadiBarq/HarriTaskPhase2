@@ -25,5 +25,9 @@ class UserProfileCollectionViewCell: UICollectionViewCell {
     func setup(representable: UserProfileCollectionViewCellRepresentable) {
         self.skillTitle.text = representable.title
     }
+    
+    static func getReuseIdentifier() -> String {
+          return "UserProfileCollectionViewCell"
+    }
 }
 

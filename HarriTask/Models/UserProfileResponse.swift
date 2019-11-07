@@ -15,7 +15,7 @@ struct UserProfileData: Decodable {
 struct UserProfileResponse: Decodable {
     let backgroundImage: String
     let profileImage: String
-    let currentJob: String
+    let currentJob: String?
     let availability: [String: Bool]
     let userProfile: UserProfile
     let experience: [Experience]
@@ -47,7 +47,7 @@ struct Experience: Decodable {
 
 struct Work: Decodable {    
      let brand: Brand
-     let customPosition: String
+     let customPosition: String?
      let description: String
      let startDate: String
      let endDate: String?

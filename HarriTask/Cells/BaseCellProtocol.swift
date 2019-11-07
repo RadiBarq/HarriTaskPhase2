@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-
-protocol BaseCellProtocol {
-    func setup(representable: BaseCellRepresentable)
-}
-
-extension UITableViewCell: BaseCellProtocol {
-    func setup(representable: BaseCellRepresentable) {}
-}
+//
+//protocol BaseCellProtocol {
+//    func setup(representable: BaseCellRepresentable)
+//}
+//
+//extension UITableViewCell: BaseCellProtocol {
+//    func setup(representable: BaseCellRepresentable) {}
+//}

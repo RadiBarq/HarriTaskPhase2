@@ -67,6 +67,14 @@ class HomeTableViewController: UITableViewController {
         viewModel.heightForFooterInSection(inSection: section)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cellRepresentable = self.viewModel.representableForRow(at: indexPath) {
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UserProfileTableViewController") as? UserProfileTableViewController
+            vc?.getUserProfileWith(userid: String(cellRepresentable.userId))
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+    }
+    
     // Will display cell for row
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // Detect when user scroll to the bottom of the tableview

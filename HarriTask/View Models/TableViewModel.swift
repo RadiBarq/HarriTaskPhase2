@@ -15,6 +15,7 @@ protocol TableViewModel {
     func viewForFooterInSection(inSection section: Int) -> UIView?
     func heightForFooterInSection(inSection section: Int) -> CGFloat
     func heightForRow(in section : Int) -> CGFloat
+    func heightForHeaderInSection(in section: Int) -> CGFloat
 }
 
 extension TableViewModel {
@@ -36,6 +37,10 @@ extension TableViewModel {
     
     func heightForRow(in section: Int) -> CGFloat {
         return 66.0
+    }
+    
+    func heightForHeaderInSection(in section: Int) -> CGFloat {
+        return 0.0
     }
 }
 

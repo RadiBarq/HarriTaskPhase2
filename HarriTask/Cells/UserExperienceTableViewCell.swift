@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserExperienceTableViewCell: BaseTableViewCell {
+class UserExperienceTableViewCell: UITableViewCell {
     @IBOutlet weak var brandName: UILabel!
     @IBOutlet weak var jobTilte: UILabel!
     @IBOutlet weak var jobDescription: UILabel!

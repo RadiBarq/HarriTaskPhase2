@@ -15,7 +15,7 @@ class UserProfileCollectionViewCellRepresentable: BaseCollectionViewRepresentabl
     let title: String 
     required init(item: String) {
         title = item
-        cellReuseIdentifier = UserProfileWithCollectionViewTableViewCell.getReuseIdentifier()
+        cellReuseIdentifier = UserProfileCollectionViewCell.getReuseIdentifier()
         cellType = UserProfileWithCollectionViewTableViewCell.self
     }
 }

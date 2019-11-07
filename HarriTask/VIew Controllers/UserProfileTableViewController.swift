@@ -14,8 +14,13 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model = UserProfileModel(userId: "66811")
         viewModel = UserProfileTableViewModel(items: [])
+        tableView.register(UserProfileTableViewSectionHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewSectionHeader.getReuseIdentifier())
+        tableView.register(UserProfileTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier:  UserProfileTableViewHeaderView.getReuseIdentifier())
+    }
+    
+    func getUserProfileWith(userid: String) {
+        model = UserProfileModel(userId: userid)
         model.getUserProfile() { result in
             switch result {
             case .success(let response):
@@ -25,18 +30,14 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
                 print(error)
             }
         }
-        tableView.register(UserProfileTableViewControllerHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewControllerHeader.getReuseIdentifier())
-        tableView.register(UserProfileTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier())
     }
     
-    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         viewModel.numberOfSections()
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        viewModel.heightForRow(in: section)
+        viewModel.heightForHeaderInSection(in: section)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,25 +46,32 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 0 {
-            return tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier())
+        let headerRepresentable = viewModel.representableHeaderForRow(at: section)
+        switch section {
+        case 0:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileTableViewHeaderView.getReuseIdentifier()) as? UserProfileTableViewHeaderView
+            headerView?.setup(representable: headerRepresentable as! UserProfileHeaderRepresentable)
+            return headerView
+        default:
+            let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileTableViewSectionHeader.getReuseIdentifier()) as? UserProfileTableViewSectionHeader
+            headerView?.setup(representable: headerRepresentable as! UserProfileSectionHeaderRepresentable)
+            return headerView
         }
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: UserProfileAboutTableViewCell.getReuseIdentifier())
-        return headerView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(indexPath.section)
         if let cellRepresentable = self.viewModel.representableForRow(at: indexPath) {
-            var cell = tableView.dequeueReusableCell(withIdentifier: cellRepresentable.cellReuseIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellRepresentable.cellReuseIdentifier, for: indexPath)
             if let currentCell = cell as? UserProfileAboutTableViewCell {
-                currentCell.setup(representable: cellRepresentable)
+                currentCell.setup(representable: cellRepresentable as! UserProfileAboutRepresentable)
+                currentCell.delegate = self
                 return currentCell
             } else if let currentCell = cell as? UserProfileWithCollectionViewTableViewCell {
-                currentCell.setup(representable: cellRepresentable)
+                currentCell.setup(representable: cellRepresentable as! UserProfileCollectionViewRepresentable)
                 return currentCell
             } else if let currentCell = cell as? UserExperienceTableViewCell {
-                currentCell.setup(representable: cellRepresentable)
+                currentCell.setup(representable: cellRepresentable as! UserProfileExperienceRepresentable)
                 return currentCell
             } else {
                 return UITableViewCell()

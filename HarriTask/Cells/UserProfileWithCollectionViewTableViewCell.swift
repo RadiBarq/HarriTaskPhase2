@@ -8,23 +8,22 @@
 
 import UIKit
 
-class UserProfileWithCollectionViewTableViewCell: BaseTableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+class UserProfileWithCollectionViewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHieght: NSLayoutConstraint!
     var model: Array<String>!
     var viewModel: UserProfileCollectionViewModel!
-
+    
     // need to be fixed in this case.
-    func setup(representable: UserProfileCollectionViewCellRepresentable, model: [String]) {
-        self.model = model
+    func setup(representable: UserProfileCollectionViewRepresentable) {
+        self.model = representable.titles
         viewModel.add(items: model)
         self.collectionView.reloadData()
         self.calculateHeight()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            self.viewModel.numberOfRows(inSection: 0)
+        self.viewModel.numberOfRows(inSection: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -36,21 +35,12 @@ class UserProfileWithCollectionViewTableViewCell: BaseTableViewCell, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: model[indexPath.row].size(withAttributes: [
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 35, height: 32)
+        viewModel.sizeForItemAt(indexPath: indexPath)
     }
     
     static func getReuseIdentifier() -> String {
-        return "UserProfileWithCollectionViewTableViewCell"
+        "UserProfileWithCollectionViewTableViewCell"
     }
-    
-    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //            let label = UILabel(frame: CGRect.zero)
-    //            label.text = textArray[indexPath.item]
-    //            label.sizeToFit()
-    //            return CGSize(width: label.frame.width, height: 32)
-    //    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,14 +65,14 @@ class UserProfileWithCollectionViewCellFlowLayout: UICollectionViewFlowLayout {
         var leftMargin: CGFloat = 0
         for attributes in attributesForElements! {
             let currentAttributes = attributes
-            if (currentAttributes.frame.origin.x == sectionInset.left) {
+            if (currentAttributes.bounds.origin.x == sectionInset.left) {
                 leftMargin = self.sectionInset.left
             } else {
-                var newFrame = currentAttributes.frame
+                var newFrame = currentAttributes.bounds
                 newFrame.origin.x = leftMargin
                 currentAttributes.frame = newFrame
             }
-            leftMargin += currentAttributes.frame.size.width + 12
+            leftMargin += currentAttributes.bounds.size.width + 12
             newAttributesForElements.append(currentAttributes)
         }
         return attributesForElements

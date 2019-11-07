@@ -6,6 +6,7 @@
 //  Copyright © 2019 Harri. All rights reserved.
 //
 import Foundation
+import UIKit
 
 class UserProfileCollectionViewModel: BaseViewModel {
     var representables: [UserProfileCollectionViewCellRepresentable]
@@ -22,8 +23,9 @@ class UserProfileCollectionViewModel: BaseViewModel {
     }
     
     func add(items: [String]) {
-           self.items += items
-           self.buildRepresentables(from: 0)
+        self.items = items
+        representables = []
+        self.buildRepresentables(from: 0)
     }
     
     func buildRepresentables(from start: Int) {
@@ -31,10 +33,15 @@ class UserProfileCollectionViewModel: BaseViewModel {
             representables.append(UserProfileCollectionViewCellRepresentable(item: item))
         }
     }
+    
+    func sizeForItemAt(indexPath: IndexPath) -> CGSize {
+        CGSize(width: items[indexPath.row].size(withAttributes: [
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)]).width + 35, height: 32)
+    }
 }
 
 extension UserProfileCollectionViewModel: TableViewModel {
     func numberOfRows(inSection section: Int) -> Int {
-          self.representables.count
-      }
+        self.representables.count
+    }
 }

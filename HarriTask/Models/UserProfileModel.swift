@@ -9,7 +9,6 @@
 import Foundation
 
 class UserProfileModel {
-    
     let userId: String
     
     init(userId: String) {

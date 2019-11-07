@@ -17,7 +17,6 @@ struct AlamoFireManager {
         }
         Alamofire.request(url,
                           method: .get)
-            .validate()
             .responseJSON { response in
                 guard response.result.isSuccess, let jsonData = response.data else {
                     completion(.failure(.responseProblem))

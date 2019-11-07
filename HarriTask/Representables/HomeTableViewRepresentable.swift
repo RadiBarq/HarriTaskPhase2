@@ -13,6 +13,7 @@ class HomeTableViewRepresentable: BaseCellRepresentable {
     var cellType: UIView.Type = UITableViewHeaderFooterView.self
     var fullName = String()
     var position = NSMutableAttributedString()
+    var userId: Int = 0
     var cellReuseIdentifier = HomeTableViewCell.getReuseIdentifier()
     var imageURL = String()
     
@@ -24,6 +25,7 @@ class HomeTableViewRepresentable: BaseCellRepresentable {
         } else {
             setFirstJobPosition()
         }
+        userId = item.id
     }
     
     //    init(firstName: String, lastName: String, position: Position?, isFirstJob: Bool, userId: Int, imageUUID: String?) {

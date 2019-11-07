@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileAboutTableViewCell: BaseTableViewCell, UITextViewDelegate {
+class UserProfileAboutTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet var textViewHeight: NSLayoutConstraint!
     @IBOutlet var textView: UITextView!
     weak var delegate: UITableViewCellDelegate?
@@ -26,13 +26,11 @@ class UserProfileAboutTableViewCell: BaseTableViewCell, UITextViewDelegate {
         textView.isEditable = false
         textView.isUserInteractionEnabled = true
     }
-    
     func setup(representable: UserProfileAboutRepresentable) {
         self.fullBioString = representable.bioString
         let truncatedString = String(representable.bioString.prefix(200))
         let attributedString = NSMutableAttributedString()
         attributedString.append(NSAttributedString(string: truncatedString, attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans", size: 14)!, NSAttributedString.Key.foregroundColor: UIColor.black]))
-        
         attributedString.append(NSAttributedString(string: "Show more", attributes: [NSAttributedString.Key.font: UIFont(name: "OpenSans", size: 14)!, NSAttributedString.Key.foregroundColor: UIColor.blue]))
         attributedString.addAttribute(.link, value: "https://www.hackingwithswift.com", range: NSRange(location: attributedString.length - 9, length: 9))
         textView.attributedText = attributedString
