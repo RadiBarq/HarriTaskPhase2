@@ -17,6 +17,8 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
         viewModel = UserProfileTableViewModel(items: [])
         tableView.register(UserProfileTableViewSectionHeader.self ,forHeaderFooterViewReuseIdentifier: UserProfileTableViewSectionHeader.getReuseIdentifier())
         tableView.register(UserProfileTableViewHeaderView.self, forHeaderFooterViewReuseIdentifier:  UserProfileTableViewHeaderView.getReuseIdentifier())
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        self.tableView.contentInset = UIEdgeInsets(top: -44 - self.navigationController!.view.safeAreaInsets.top ,left: 0,bottom: 0,right: 0)
     }
     
     func getUserProfileWith(userid: String) {
@@ -36,6 +38,7 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
         viewModel.numberOfSections()
     }
     
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         viewModel.heightForHeaderInSection(in: section)
     }
@@ -43,6 +46,19 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         self.viewModel.numberOfRows(inSection: section)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = scrollView.contentOffset.y
+        print(y)
+        if y <= 0 {
+            hideNavigationBar()
+        } else if y > 0 && y <= 232 - self.navigationController!.view.safeAreaInsets.top {
+            showNavigationBar()
+            self.navigationController?.navigationBar.alpha = y/(232 - self.navigationController!.view.safeAreaInsets.top)
+        } else {
+            self.navigationController?.navigationBar.alpha = 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -58,6 +74,24 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
             return headerView
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        showNavigationBar()
+        navigationController?.navigationBar.barTintColor = UIColor(red: 74/255, green: 144/255, blue: 226/255, alpha: 1)
+        self.navigationController?.navigationBar.alpha = 1
+    }
+    
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        if section == 0 {
+//            self.navigationController?.navigationBar.barTintColor.alpha = 0.5
+//        }
+//    }
+//
+//    override func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+//        if section == 0 {
+//            self.navigationController?.navigationBar.alpha = 1.0
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(indexPath.section)
@@ -82,6 +116,17 @@ class UserProfileTableViewController: UITableViewController, UITableViewCellDele
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
+    }
+    
+    func hideNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.view.backgroundColor = .clear
+    }
+    
+    func showNavigationBar() {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.shadowImage = nil
     }
     
     func didChangeHeight() {

@@ -92,9 +92,11 @@
         <scene sceneID="VUY-Ml-rNu">
             <objects>
                 <tableViewController storyboardIdentifier="UserProfileTableViewController" id="QoH-l9-OVL" customClass="UserProfileTableViewController" customModule="HarriTask" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="aDU-aE-sCk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" contentViewInsetsToSafeArea="NO" id="aDU-aE-sCk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="auR-Ay-3UR"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="fKH-wI-4yw"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserExperienceTableViewCell" rowHeight="100" id="ZbN-PB-Jzd" customClass="UserExperienceTableViewCell" customModule="HarriTask" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.5" width="374" height="100"/>
