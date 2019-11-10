@@ -63,16 +63,16 @@ class UserProfileWithCollectionViewCellFlowLayout: UICollectionViewFlowLayout {
         let attributesForElements = super.layoutAttributesForElements(in: rect)
         var newAttributesForElements = [AnyObject]()
         var leftMargin: CGFloat = 0
+        
         for attributes in attributesForElements! {
             let currentAttributes = attributes
-            if (currentAttributes.bounds.origin.x == sectionInset.left) {
-                leftMargin = self.sectionInset.left
-            } else {
-                var newFrame = currentAttributes.bounds
-                newFrame.origin.x = leftMargin
-                currentAttributes.frame = newFrame
+            if leftMargin + currentAttributes.frame.size.width > rect.width{
+                leftMargin = 0
             }
-            leftMargin += currentAttributes.bounds.size.width + 12
+            var newFrame = currentAttributes.frame
+            newFrame.origin.x = leftMargin
+            currentAttributes.frame = newFrame
+            leftMargin += currentAttributes.frame.size.width + 10
             newAttributesForElements.append(currentAttributes)
         }
         return attributesForElements

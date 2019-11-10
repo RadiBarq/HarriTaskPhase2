@@ -31,6 +31,10 @@ class HomeTableViewController: UITableViewController {
         self.getInitialData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Harri"
+    }
+    
     //Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -70,7 +74,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cellRepresentable = self.viewModel.representableForRow(at: indexPath) {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UserProfileTableViewController") as? UserProfileTableViewController
-            vc?.getUserProfileWith(userid: String(cellRepresentable.userId))
+            vc?.getUserProfileWith(userid: String(cellRepresentable.userId), userName: cellRepresentable.fullName)
             self.navigationController?.pushViewController(vc!, animated: true)
         }
     }

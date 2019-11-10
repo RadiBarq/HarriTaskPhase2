@@ -27,22 +27,7 @@ class HomeTableViewRepresentable: BaseCellRepresentable {
         }
         userId = item.id
     }
-    
-    //    init(firstName: String, lastName: String, position: Position?, isFirstJob: Bool, userId: Int, imageUUID: String?) {
-    //
-    //
-    //        guard let searchResult =
-    //
-    //        setFullName(firstName: firstName, lastName: lastName)
-    //        setImageURLFor(userId: userId, imageUUID: imageUUID)
-    //
-    //        if let position = position {
-    //            setJobPosition(isFirstJob: isFirstJob, positionName: position.name, positionBrand: position.brandName)
-    //        } else {
-    //            setFirstJobPosition()
-    //        }
-    //    }
-    //
+
     private func setFullName(firstName: String, lastName: String) {
         fullName = firstName + " " + lastName
     }

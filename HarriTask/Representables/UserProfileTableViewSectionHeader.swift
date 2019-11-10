@@ -15,18 +15,19 @@ class UserProfileHeaderRepresentable: BaseUserProfileRepresentable{
     let backgroundImageURL: String
     let positionTitle: String
     let imageURL: String
-
+    let userId: Int
+    
     required init(item: UserProfileResponse) {
-        self.fullName = item.userInfo.username
-        self.backgroundImageURL = item.backgroundImage
-        self.imageURL = item.profileImage
+        self.fullName = item.userInfo.username ?? ""
+        self.userId = item.userInfo.id
         if let currentJob = item.currentJob {
             positionTitle = currentJob
         } else {
             positionTitle = "is looking for their first job"
         }
+        imageURL = NetworkManager.imageURLString + String(userId) + "/user_profile/" + item.profileImage + "/240_240.jpeg"
+        backgroundImageURL = NetworkManager.imageURLString + String(userId) + "/user_profile/" + item.backgroundImage + "/240_240.jpeg"
         self.cellReuseIdentifier = UserProfileTableViewHeaderCell.getReuseIdentifier()
         cellType = UITableViewHeaderFooterView.self
     }
-    
 }

@@ -35,7 +35,7 @@ struct UserProfileResponse: Decodable {
 }
 
 struct UserProfile: Decodable {
-    let bio: String
+    let bio: String?
 }
 
 struct Experience: Decodable {
@@ -72,7 +72,8 @@ struct UserSkill: Decodable {
 }
 
 struct UserInfo: Decodable {
-    let username: String
-    let about: String
+    let username: String?
+    let about: String?
+    let id: Int
 }
 

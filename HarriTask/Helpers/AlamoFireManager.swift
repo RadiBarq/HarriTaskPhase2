@@ -11,8 +11,8 @@ import Foundation
 struct AlamoFireManager {
     static var userProfileURLString = "https://api.harridev.com/api/v1/profile/member"
     static func getUserPrfoile(with id: String, completion: @escaping(Swift.Result<UserProfileResponse, APIError>) -> Void) {
-        userProfileURLString += "/\(id)"
-        guard let url = URL(string: userProfileURLString) else {
+        let urlString = userProfileURLString + "/\(id)"
+        guard let url = URL(string: urlString) else {
             return
         }
         Alamofire.request(url,

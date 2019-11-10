@@ -14,7 +14,7 @@ class UserProfileAboutRepresentable: BaseCellRepresentable {
     let bioString: String
     let cellReuseIdentifier: String
     required init(item: UserProfileResponse) {
-        bioString = item.userInfo.about
+        bioString = item.userInfo.about ?? ""
         cellReuseIdentifier = UserProfileAboutTableViewCell.getReuseIdentifier()
         cellType = UserProfileAboutTableViewCell.self
     }

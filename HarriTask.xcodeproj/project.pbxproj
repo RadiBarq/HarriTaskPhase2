@@ -15,7 +15,6 @@
 		4B0EFC05236B268600B450B6 /* TableSectionRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EFC04236B268600B450B6 /* TableSectionRepresentable.swift */; };
 		4B0EFC07236B2B5C00B450B6 /* UserProfileTableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EFC06236B2B5C00B450B6 /* UserProfileTableViewSectionHeader.swift */; };
 		4B0EFC09236B2C6400B450B6 /* BaseUserProfileRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EFC08236B2C6400B450B6 /* BaseUserProfileRepresentable.swift */; };
-		4B0EFC0B236B2F6900B450B6 /* BaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0EFC0A236B2F6900B450B6 /* BaseRepresentable.swift */; };
 		4B1405BB2369AF2C00D064F1 /* AlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BA2369AF2C00D064F1 /* AlamoFireManager.swift */; };
 		4B1405BD2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */; };
 		4B1405BF2369CFC300D064F1 /* UITableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */; };
@@ -42,7 +41,6 @@
 		4B58D998236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D997236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift */; };
 		4B58D99A236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */; };
 		4B58D99C236ED28900793BDD /* UserProfileExperienceRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */; };
-		4B58D9A0236ED7E100793BDD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D99F236ED7E000793BDD /* BaseTableViewCell.swift */; };
 		4B58D9A4236F273600793BDD /* UserProfileCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D9A3236F273600793BDD /* UserProfileCollectionViewModel.swift */; };
 		4B58D9A6236F295D00793BDD /* BaseCollectionViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58D9A5236F295D00793BDD /* BaseCollectionViewRepresentable.swift */; };
 		4B72C6002365EF35006B9820 /* UserProfileTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */; };
@@ -51,16 +49,13 @@
 		4B7913232361C074005C9613 /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913222361C074005C9613 /* UserProfileTableViewController.swift */; };
 		4B7913252361C818005C9613 /* UserProfileTableViewControllerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */; };
 		4B7913272361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */; };
-		4B7913292361E44E005C9613 /* UserProfileCellCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */; };
 		4B79132F2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */; };
 		4B7913312361F042005C9613 /* UserProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */; };
-		4BE91C0D2372FB23004D9CDA /* BaseCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE91C0C2372FB23004D9CDA /* BaseCellProtocol.swift */; };
 		4BE91C0F23731695004D9CDA /* UserProfileCollectionViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE91C0E23731695004D9CDA /* UserProfileCollectionViewRepresentable.swift */; };
 		4BE91C1123740D8C004D9CDA /* UserProfileSectionHeaderRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE91C1023740D8C004D9CDA /* UserProfileSectionHeaderRepresentable.swift */; };
 		4BEC589D2356F5E700412F10 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */; };
 		4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */; };
 		4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC58A0235710E200412F10 /* TableViewModel.swift */; };
-		4BEE3CEE23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */; };
 		8B5735C0EA99DD1B94212766 /* Pods_HarriTask_HarriTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB06F5460C475CCD936D51 /* Pods_HarriTask_HarriTaskUITests.framework */; };
 		9531E7902C9CA259FAB64BCD /* Pods_HarriTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */; };
 		CAAFABEC7340D05D96CC31F8 /* Pods_HarriTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */; };
@@ -92,7 +87,6 @@
 		4B0EFC04236B268600B450B6 /* TableSectionRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionRepresentable.swift; sourceTree = "<group>"; };
 		4B0EFC06236B2B5C00B450B6 /* UserProfileTableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewSectionHeader.swift; sourceTree = "<group>"; };
 		4B0EFC08236B2C6400B450B6 /* BaseUserProfileRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUserProfileRepresentable.swift; sourceTree = "<group>"; };
-		4B0EFC0A236B2F6900B450B6 /* BaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepresentable.swift; sourceTree = "<group>"; };
 		4B1405BA2369AF2C00D064F1 /* AlamoFireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireManager.swift; sourceTree = "<group>"; };
 		4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
 		4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +119,6 @@
 		4B58D997236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellWithTitleRepresentable.swift; sourceTree = "<group>"; };
 		4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewCellRepresentable.swift; sourceTree = "<group>"; };
 		4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileExperienceRepresentable.swift; sourceTree = "<group>"; };
-		4B58D99F236ED7E000793BDD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		4B58D9A3236F273600793BDD /* UserProfileCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewModel.swift; sourceTree = "<group>"; };
 		4B58D9A5236F295D00793BDD /* BaseCollectionViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewRepresentable.swift; sourceTree = "<group>"; };
 		4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileTableViewHeaderView.xib; sourceTree = "<group>"; };
@@ -134,16 +127,13 @@
 		4B7913222361C074005C9613 /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
 		4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewControllerHeader.swift; sourceTree = "<group>"; };
 		4B7913262361D6FC005C9613 /* UserProfileTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewHeaderCell.swift; sourceTree = "<group>"; };
-		4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCellCollectionViewController.swift; sourceTree = "<group>"; };
 		4B79132E2361E68A005C9613 /* UserProfileWithCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileWithCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewCell.swift; sourceTree = "<group>"; };
-		4BE91C0C2372FB23004D9CDA /* BaseCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCellProtocol.swift; sourceTree = "<group>"; };
 		4BE91C0E23731695004D9CDA /* UserProfileCollectionViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCollectionViewRepresentable.swift; sourceTree = "<group>"; };
 		4BE91C1023740D8C004D9CDA /* UserProfileSectionHeaderRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSectionHeaderRepresentable.swift; sourceTree = "<group>"; };
 		4BEC589C2356F5E700412F10 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 		4BEC589E2356FB2B00412F10 /* HomeTableViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewRepresentable.swift; sourceTree = "<group>"; };
 		4BEC58A0235710E200412F10 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
-		4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileWithCollectionViewTableViewCell.xib; sourceTree = "<group>"; };
 		533A11A2B4F3C3D1D9E9B9CC /* Pods_HarriTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B9FE205A61ED32C660337E /* Pods_HarriTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarriTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D502FAD4C687378CB4D951A /* Pods-HarriTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarriTask.release.xcconfig"; path = "Target Support Files/Pods-HarriTask/Pods-HarriTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,7 +270,6 @@
 			children = (
 				4B411CD4234F8723008FE67D /* HomeTableViewController.swift */,
 				4B7913222361C074005C9613 /* UserProfileTableViewController.swift */,
-				4B7913282361E44E005C9613 /* UserProfileCellCollectionViewController.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
@@ -293,7 +282,6 @@
 				4B411CAA234F8687008FE67D /* Main.storyboard */,
 				4B411CAF234F8689008FE67D /* LaunchScreen.storyboard */,
 				4B7913242361C818005C9613 /* UserProfileTableViewControllerHeader.swift */,
-				4BEE3CED23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib */,
 				4B72C5FF2365EF35006B9820 /* UserProfileTableViewHeaderView.xib */,
 				4B72C6012365F6FF006B9820 /* UserProfileTableViewHeaderView.swift */,
 			);
@@ -321,8 +309,6 @@
 				4B7913302361F042005C9613 /* UserProfileCollectionViewCell.swift */,
 				4B1405BC2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift */,
 				4B1405BE2369CFC300D064F1 /* UITableViewCellDelegate.swift */,
-				4B58D99F236ED7E000793BDD /* BaseTableViewCell.swift */,
-				4BE91C0C2372FB23004D9CDA /* BaseCellProtocol.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -336,7 +322,6 @@
 				4B0EFC04236B268600B450B6 /* TableSectionRepresentable.swift */,
 				4B0EFC06236B2B5C00B450B6 /* UserProfileTableViewSectionHeader.swift */,
 				4B0EFC08236B2C6400B450B6 /* BaseUserProfileRepresentable.swift */,
-				4B0EFC0A236B2F6900B450B6 /* BaseRepresentable.swift */,
 				4B58D995236EC66C00793BDD /* UserProfileAboutRepresentable.swift */,
 				4B58D999236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift */,
 				4B58D99B236ED28900793BDD /* UserProfileExperienceRepresentable.swift */,
@@ -485,7 +470,6 @@
 				4B411CAC234F8687008FE67D /* Main.storyboard in Resources */,
 				4B411CEF2353731D008FE67D /* OpenSans-Regular.ttf in Resources */,
 				4B72C6002365EF35006B9820 /* UserProfileTableViewHeaderView.xib in Resources */,
-				4BEE3CEE23659B9700C48109 /* UserProfileWithCollectionViewTableViewCell.xib in Resources */,
 				4B411CED235372B4008FE67D /* OpenSans-Semibold.ttf in Resources */,
 				4B411CF12353732F008FE67D /* OpenSans-Italic.ttf in Resources */,
 			);
@@ -634,25 +618,21 @@
 				4B411CA5234F8686008FE67D /* AppDelegate.swift in Sources */,
 				4B72C6022365F6FF006B9820 /* UserProfileTableViewHeaderView.swift in Sources */,
 				4B58D998236ECDDD00793BDD /* BaseCellWithTitleRepresentable.swift in Sources */,
-				4B7913292361E44E005C9613 /* UserProfileCellCollectionViewController.swift in Sources */,
 				4B411CD723530E11008FE67D /* HomeTableViewCell.swift in Sources */,
 				4B58D9A6236F295D00793BDD /* BaseCollectionViewRepresentable.swift in Sources */,
 				4BE91C1123740D8C004D9CDA /* UserProfileSectionHeaderRepresentable.swift in Sources */,
 				4B411CDF23531B21008FE67D /* APIError.swift in Sources */,
 				4B0EFC01236B128F00B450B6 /* BaseViewModel.swift in Sources */,
-				4B58D9A0236ED7E100793BDD /* BaseTableViewCell.swift in Sources */,
 				4B411CA7234F8686008FE67D /* SceneDelegate.swift in Sources */,
 				4B58D99C236ED28900793BDD /* UserProfileExperienceRepresentable.swift in Sources */,
 				4BEC589F2356FB2B00412F10 /* HomeTableViewRepresentable.swift in Sources */,
 				4B58D996236EC66C00793BDD /* UserProfileAboutRepresentable.swift in Sources */,
 				4B7913212361B8A0005C9613 /* UserExperienceTableViewCell.swift in Sources */,
 				4B0EFBFF236B127500B450B6 /* UserProfileTableViewModel.swift in Sources */,
-				4B0EFC0B236B2F6900B450B6 /* BaseRepresentable.swift in Sources */,
 				4BEC58A1235710E200412F10 /* TableViewModel.swift in Sources */,
 				4B411CDB2353134D008FE67D /* UserSearchBodyData.swift in Sources */,
 				4B58D99A236ECF1200793BDD /* UserProfileCollectionViewCellRepresentable.swift in Sources */,
 				4B0EFC07236B2B5C00B450B6 /* UserProfileTableViewSectionHeader.swift in Sources */,
-				4BE91C0D2372FB23004D9CDA /* BaseCellProtocol.swift in Sources */,
 				4B0EFBFB2369E65800B450B6 /* UserProfileResponse.swift in Sources */,
 				4B1405BD2369B8EB00D064F1 /* UserProfileAboutTableViewCell.swift in Sources */,
 				4B1405BB2369AF2C00D064F1 /* AlamoFireManager.swift in Sources */,
@@ -834,7 +814,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S7V735958;
 				INFOPLIST_FILE = HarriTask/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -854,7 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5S7V735958;
 				INFOPLIST_FILE = HarriTask/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

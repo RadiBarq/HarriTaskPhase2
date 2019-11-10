@@ -11,11 +11,12 @@ import UIKit
 
 class UserProfileTableViewModel: BaseViewModel {
     var representables: [TableSectionRepresentable]
+    var userName: String
     
     func representableForRow(at indexPath: IndexPath) -> BaseCellRepresentable? {
         indexPath.row >= 0 ? self.representables[indexPath.section].cells[indexPath.row] : nil
     }
-    
+
     func representableHeaderForRow(at section: Int) -> BaseCellRepresentable {
         switch section {
         case 0:
@@ -30,7 +31,12 @@ class UserProfileTableViewModel: BaseViewModel {
     required init(items: [UserProfileResponse]) {
         self.items = items
         self.representables = []
+        userName = ""
         //  self.buildRepresentables(from: 0)
+    }
+    
+    func setUserName(userName: String) {
+        self.userName = userName
     }
     
     func add(items: [UserProfileResponse]) {

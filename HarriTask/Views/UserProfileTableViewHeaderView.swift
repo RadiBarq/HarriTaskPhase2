@@ -48,7 +48,7 @@ class UserProfileTableViewHeaderView: UITableViewHeaderFooterView {
     func setup(representable: UserProfileHeaderRepresentable) {
         nameLabel.text = representable.fullName
         jobLabel.text = representable.positionTitle
-        self.profileImageView.setup(imageUrl: representable.imageURL, fullName: representable.fullName , showInitails: true)
+        self.profileImageView.setup(imageUrl:representable.imageURL, fullName: representable.fullName , showInitails: true)
         self.backgroundImageView.setup(imageUrl: representable.backgroundImageURL, fullName: representable.fullName, showInitails: true)
     }
 }
